@@ -5,13 +5,13 @@ class House:
         self.go_to()
 
     def go_to(new_floor):
-        nonlocal number_of_floors
-        new_floor = number_of_floors
-        for i in range(1, new_floor + 1):
-            print(i)
+        if new_floor > new_floor.number_of_floors or new_floor < 1:
+            print("Такого этажа не существует")
+        else:
+            for i in range(1, new_floor + 1):
+                print(i)
 
 h1 = House('ЖК Горский', 18)
 h2 = House('Домик в деревне', 2)
 h1.go_to(5)
 h2.go_to(10)
-
